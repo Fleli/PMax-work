@@ -1,0 +1,38 @@
+
+macro ints = [char*] 12000;
+
+func print_int(n: int) {
+    
+    var i = 0;
+    var m = 10;
+    
+    while (n > 0) {
+        
+        var remainder = mod(n, m);
+        n @-= remainder;
+        
+        var digit = div(mul(10, remainder), m);
+        var c = '0' + digit;
+        *(ints + i) = c;
+        i @+= 1;
+        
+        m = mul(m, 10);
+        
+    }
+    
+    *(ints + i) = '\0';
+    *(ints + i + 1) = '\0';
+    
+    var j = 0;
+    
+    // Reverse order
+    while (j <= div(i, 2)) {
+        var tmp = *(ints + j);
+        *(ints + j) = *(ints + i - j);
+        *(ints + i - j) = tmp;
+        j @+= 1;
+    }
+    
+    call print(ints + 1);
+    
+}

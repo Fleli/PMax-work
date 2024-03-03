@@ -1,0 +1,10 @@
+
+func mod(x: int, m: int) -> int {
+    
+    while (x >= 0) {
+        x @-= m;
+    }
+    
+    return x + m;
+    
+}

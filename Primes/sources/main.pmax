@@ -1,0 +1,13 @@
+// main.pmax
+// Copyright (c) Frederik Edvardsen
+// Created 3.3.2024
+
+import Stdlib;
+
+func main() -> int {
+	
+	call find_primes(1000);
+	
+	return 0;
+	
+}

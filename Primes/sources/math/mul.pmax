@@ -1,0 +1,13 @@
+
+func mul(a: int, b: int) -> int {
+    
+    var p = 0;
+    
+    while a > 0 {
+        p @+= b;
+        a @-= 1;
+    }
+    
+    return p;
+    
+}

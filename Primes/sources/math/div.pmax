@@ -1,0 +1,13 @@
+
+func div(a: int, b: int) -> int {
+    
+    var r = 0;
+    
+    while (a >= 0) {
+        r @+= 1;
+        a @-= b;
+    }
+    
+    return r - 1;
+    
+}
